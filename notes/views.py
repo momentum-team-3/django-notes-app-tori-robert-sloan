@@ -7,7 +7,9 @@ def notes_list(request):
     notes = user.notes.all()
     return render(request, ' notes/list_notes.html', {'notes': notes})
 
-def notes_detail()
+def notes_detail(request, pk)
+note = Note.objects.get(pk=pk)
+return render(request, 'notes_detail.html', {'Notes':notes})
 
 def add_note(request):
     form = NoteForm()

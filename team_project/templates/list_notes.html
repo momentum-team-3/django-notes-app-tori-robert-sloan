@@ -3,8 +3,9 @@
 {% block content %}
 <h1>All Notes</h1>
 {% for note in notes %}
-<div>
-    {{ note }}
-</div>
+
+   <h2>{ note.title }</h2>
+<div> { note.body }</div>
+<div> { note.date_time }}</div>
 {% endfor %}
 {% endblock %}
