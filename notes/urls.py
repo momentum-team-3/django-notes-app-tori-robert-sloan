@@ -17,7 +17,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path("", views.ListNotes.as_view(), name="notes_list"),
+    path("", views.notes_list.as_view(), name="notes_list"),
     
 
 
