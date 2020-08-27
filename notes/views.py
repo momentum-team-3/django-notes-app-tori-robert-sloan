@@ -1,14 +1,13 @@
 from django.shortcuts import render
-from .models import Notes
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.list import ListView
+from .models import Note
 
 # Create your views here.
-class notes_list(request):
-    user = request.user
-    notes = user.notes.all()
-    return render(request, ' notes/notes_list.html', {'notes': notes})
+class notes_list(ListView):
+    model = Note
 
-class notes_detail(request, pk):
-    model = Notes
+class Notes_Detail(DetailView):
+    model = Note
 
-class add_note(request):
-    model = Notes

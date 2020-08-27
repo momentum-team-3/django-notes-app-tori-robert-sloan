@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class NotesConfig(AppConfig):
+class NoteConfig(AppConfig):
     name = 'notes'
