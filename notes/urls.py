@@ -18,7 +18,9 @@ from . import views
 
 urlpatterns = [
     path("", views.notes_list.as_view(), name="notes_list"),
-    
+    path("<int:pk>/", views.Notes_Detail.as_view(), name="notes_detail"),
+    path("create/", views.Create_note.as_view(), name="notes_create"),
+ 
 
 
 

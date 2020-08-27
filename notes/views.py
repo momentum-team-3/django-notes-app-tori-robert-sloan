@@ -11,3 +11,5 @@ class notes_list(ListView):
 class Notes_Detail(DetailView):
     model = Note
 
+class Create_note(CreateView):
+    model = Note

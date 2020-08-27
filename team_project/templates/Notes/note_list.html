@@ -1,17 +1,11 @@
 {% extends "base.html" %}
-{% block title %}<title>Notes</title>{% endblock %}
 
-{% block navbar %}
-    <nav>
-        <a href="{% url 'list notes' %}">Home</a>
-    </nav>
-{% endblock %}
+{% block title %}<title>Your Notes</title>{% endblock %}
+
 {% block content %}
     <h1>Notes</h1>
     {% for note in object_list %}
-      <p>{{ note.note_title }}</p>
-      <p>{{ note.note_text }}</p>
-      <p>{{ note.date_created }}</p>
+        <p><a href="{% url 'notes_detail' note.pk %}">{{ note.note_title }}</a></p>
     {% endfor %}
+    <p><a href="{% url 'notes_create' %}">Add Note</a></p>
 {% endblock %}
-

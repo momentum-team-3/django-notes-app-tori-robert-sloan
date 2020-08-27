@@ -1,7 +1,7 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 
 {% block content %}
-    <div>{{ Note.title }}</div>
-    <div>{{ note.body }}</div>
+    <div>{{ Note.note_title }}</div>
+    <div>{{ note.note_text }}</div>
     <div>{{ note.when_created }}</div>
 {% end block %}
