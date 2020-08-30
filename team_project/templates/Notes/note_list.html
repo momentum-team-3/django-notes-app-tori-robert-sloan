@@ -7,5 +7,5 @@
     {% for note in object_list %}
         <p><a href="{% url 'note_detail' note.pk %}">{{ note.note_title }}</a></p>
     {% endfor %}
-    <p><a href="{% url 'notes_create' %}">Add Note</a></p>
+    <p><a href="/notes/create/">Add Note</a></p>
 {% endblock %}

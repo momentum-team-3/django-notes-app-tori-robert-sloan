@@ -5,11 +5,14 @@ from django.views.generic.list import ListView
 from .models import Note
 
 # Create your views here.
-class notes_list(ListView):
+class NotesList(ListView):
     model = Note
 
-class Notes_Detail(DetailView):
+class NotesDetail(DetailView):
     model = Note
 
-class Create_note(CreateView):
+class CreateNote(CreateView):
     model = Note
+    fields = ["note_title", "note_text"] 
+    template_name_suffix = "_create"   
+    success_url = '/notes/'
